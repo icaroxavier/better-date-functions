@@ -15,7 +15,33 @@ function getMonthLength(date){
     }
 }
 
+function getMonthName(date){
+    if(checkDateType(date)){
+        return Enums.MONTHS[language][date.getMonth()]
+    }
+}
+
+function getMonthInfo(date){
+    if(checkDateType(date)){
+        return {
+            name: getMonthName(date),
+            length: getMonthLength(date),
+            year: date.getFullYear()
+        }
+    }
+}
+
+function getYearLength(date){
+    if(checkDateType(date)) {
+        const year = date.getFullYear()
+        return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0) ? 366 : 365
+    }
+}
+
 module.exports = {
     getWeekDayName,
-    getMonthLength
+    getMonthLength,
+    getMonthName,
+    getMonthInfo,
+    getYearLength
 }

@@ -1,10 +1,10 @@
 {
   "name": "better-date-functions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JavaScript library with more functions for the normal Date class.",
   "main": "index.js",
   "scripts": {
-    "test": "hello()"
+    "test": "test()"
   },
   "repository": {
     "type": "git",
