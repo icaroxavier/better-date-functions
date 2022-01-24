@@ -1,2 +1,2 @@
 # better-date-functions
-A JavaScript lib with more functions for the normal Date class.
+A JavaScript library with more functions for the normal Date class.

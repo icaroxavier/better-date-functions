@@ -1,0 +1,35 @@
+{
+  "name": "better-date-functions",
+  "version": "1.0.0",
+  "description": "A JavaScript library with more functions for the normal Date class.",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello()"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/XaloDev/better-date-functions.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "date",
+    "more",
+    "new",
+    "Date",
+    "Date()",
+    "functions",
+    "ptBr",
+    "enUs",
+    "month length",
+    "month info",
+    "date format",
+    "year length"
+  ],
+  "author": "Xalo Dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XaloDev/better-date-functions/issues"
+  },
+  "homepage": "https://github.com/XaloDev/better-date-functions#readme"
+}
