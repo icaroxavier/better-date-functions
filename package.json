@@ -1,6 +1,6 @@
 {
   "name": "better-date-functions",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A JavaScript library with more functions for the normal Date class.",
   "main": "index.js",
   "scripts": {

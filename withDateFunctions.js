@@ -41,7 +41,7 @@ function getYearLength(date){
 function getFormatedDate(date, separatorParam = '/'){
     if(checkDateType(date) && checkType(separatorParam, 'string')) {
 
-        const separator = separatorParam ? separatorParam : '/'
+        const separator = separatorParam[0] ? separatorParam[0] : '/'
 
         let day = date.getDate() 
         day = day < 10 ? `0${day}` : day
