@@ -1,7 +1,7 @@
 const Enums = require('./enums.js')
 const Utils = require('./utils.js')
 
-const { language, checkDateType } = Utils
+const { language, checkDateType, checkType } = Utils
 
 function getWeekDayName(date){
     if(checkDateType(date)){
@@ -38,10 +38,26 @@ function getYearLength(date){
     }
 }
 
+function getFormatedDate(date, separatorParam = '/'){
+    if(checkDateType(date) && checkType(separatorParam, 'string')) {
+
+        const separator = separatorParam ? separatorParam : '/'
+
+        let day = date.getDate() 
+        day = day < 10 ? `0${day}` : day
+
+        let month = date.getMonth() + 1
+        month = month < 10 ? `0${month}` : month
+
+        return day.toString() + separator[0] + month.toString() + separator[0] + date.getFullYear().toString()
+    }
+}
+
 module.exports = {
     getWeekDayName,
     getMonthLength,
     getMonthName,
     getMonthInfo,
-    getYearLength
+    getYearLength,
+    getFormatedDate
 }

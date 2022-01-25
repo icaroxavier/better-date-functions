@@ -45,7 +45,7 @@ function checkLanguage(languageParam){
 
 function checkType(element, type, message){
     if(typeof element !== type){
-        if(isthrowingErrors){
+        if(isThrowingErrors){
             throw new TypeException(message)
         } else{ 
             console.error(message)
@@ -58,7 +58,7 @@ function checkType(element, type, message){
 
 function checkRange(element, min, max, message){
     if(element < min || element >  max){
-        if(isthrowingErrors){
+        if(isThrowingErrors){
             throw new RangeException(message)
         } else{ 
             console.error(message)
@@ -108,6 +108,7 @@ module.exports = {
     checkLanguage,
     checkDateNumbers,
     checkDateType,
+    checkType,
     setLanguage,
     getCurrentLanguage,
     setThrowingErrors,

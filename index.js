@@ -19,3 +19,6 @@ module.exports = {
 // console.log(withDateFunctions.getMonthName(new Date()))
 // console.log(withDateFunctions.getMonthInfo(new Date()))
 // console.log(withDateFunctions.getYearLength(new Date()))
+console.log(withDateFunctions.getFormatedDate(new Date()))
+console.log(withDateFunctions.getFormatedDate(new Date(), '-'))
+console.log(withDateFunctions.getFormatedDate(new Date(), ''))
