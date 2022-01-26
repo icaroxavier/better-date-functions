@@ -1,7 +1,7 @@
 const MONTHS = {
     ptBr: [
         'Janeiro',
-        'Feveiro',
+        'Fevereiro',
         'Março',
         'Abril',
         'Maio',

@@ -6,7 +6,6 @@ module.exports = {
     withDate: withDateFunctions
 }
 
-
 // console.log(functions.getMonthLength(2, 2024))
 // console.log(functions.getMonthName(2, 2024))
 // console.log(functions.getWeekDayName(2))
@@ -19,6 +18,10 @@ module.exports = {
 // console.log(withDateFunctions.getMonthName(new Date()))
 // console.log(withDateFunctions.getMonthInfo(new Date()))
 // console.log(withDateFunctions.getYearLength(new Date()))
-console.log(withDateFunctions.getFormatedDate(new Date()))
-console.log(withDateFunctions.getFormatedDate(new Date(), '-'))
-console.log(withDateFunctions.getFormatedDate(new Date(), ''))
+// console.log(withDateFunctions.getFormatedDate(new Date()))
+// console.log(withDateFunctions.getFormatedDate(new Date(), '-'))
+// console.log(withDateFunctions.getFormatedDate(new Date(), ''))
+// console.log(functions.getCurrentThrowingErrorsState())
+// functions.setThrowingErrors(false)
+// console.log(functions.getCurrentThrowingErrorsState())
+// console.log(withDateFunctions.getFormatedDate(new Date(), 1))

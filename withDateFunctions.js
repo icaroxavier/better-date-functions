@@ -1,11 +1,11 @@
 const Enums = require('./enums.js')
 const Utils = require('./utils.js')
 
-const { language, checkDateType, checkType } = Utils
+const { getCurrentLanguage, checkDateType, checkType } = Utils
 
 function getWeekDayName(date){
     if(checkDateType(date)){
-        return Enums.WEEK_DAYS[language][date.getDay()]
+        return Enums.WEEK_DAYS[getCurrentLanguage()][date.getDay()]
     }
 }
 
@@ -17,7 +17,7 @@ function getMonthLength(date){
 
 function getMonthName(date){
     if(checkDateType(date)){
-        return Enums.MONTHS[language][date.getMonth()]
+        return Enums.MONTHS[getCurrentLanguage()][date.getMonth()]
     }
 }
 
@@ -49,7 +49,15 @@ function getFormatedDate(date, separatorParam = '/'){
         let month = date.getMonth() + 1
         month = month < 10 ? `0${month}` : month
 
-        return day.toString() + separator[0] + month.toString() + separator[0] + date.getFullYear().toString()
+        const currentLanguage = getCurrentLanguage()
+        if(currentLanguage === 'enUs'){
+            return month.toString() + separator[0] + day.toString() + separator[0] + date.getFullYear().toString()
+        }else if(currentLanguage === 'ptBr'){
+            return day.toString() + separator[0] + month.toString() + separator[0] + date.getFullYear().toString()
+        }else{
+            return null
+        }
+        
     }
 }
 

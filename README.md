@@ -12,89 +12,181 @@ or
 yarn add better-date-functions
 </code></pre>
 <h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="How_to_use_24"></a>How to use</h2>
-<pre><code class="has-line-data" data-line-start="27" data-line-end="112" class="language-sh">// import the the BDF dependency
-import BDF from <span class="hljs-string">'better-date-functions'</span>;
+<pre><code class="has-line-data" data-line-start="27" data-line-end="112" class="language-sh">
 
-// Get <span class="hljs-built_in">functions</span> of BDF Object (Optional)
+```js
+// import the the BDF dependency
+import BDF from 'better-date-functions';
 
 const { 
-    getWeekDayName, 
-    getWeekDayNameWithADate,
-    getMonthName,
     getMonthLength,
+    getMonthName,
+    getWeekDayName,
+    getWeekDayNameWithADate,
+    setLanguage,
+    getCurrentLanguage,
     getMonthInfo,
-    <span class="hljs-built_in">set</span>Language,
-    <span class="hljs-built_in">set</span>ThrowingErrors
-} = BDF;
+    getYearLength,
+    setThrowingErrors,
+    getCurrentThrowingErrorsState,
+} = BDF; // Destructuring (optional)
 
+```
 
-// Using the <span class="hljs-built_in">functions</span>
+```js
+// Using the functions
 
+// Days must be a number between 1~31
+// Months must be a number between 1~12
+// Year Must be a number
 
-// example <span class="hljs-number">1</span>
-const day = <span class="hljs-number">24</span>
-const month = <span class="hljs-number">1</span>
-const year = <span class="hljs-number">2022</span>
+//Example:
+
+const day = 24
+const month = 1
+const year = 2022
+
 const weekDayName = getWeekDayNameWithADate(day, month, year);
 
-console.log(weekDayName) // <span class="hljs-built_in">return</span> Monday
+console.log(weekDayName) // returns "Monday"
 
-// example <span class="hljs-number">2</span>
+```
 
-const weekDay = <span class="hljs-number">1</span>
+<h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="How_to_use_24"></a>All examples</h2>
+
+```js
+//Example 1:
+
+const weekDay = 1
 const weekDayName = getWeekDayName(weekDay)
-console.log(weekDayName) // <span class="hljs-built_in">return</span> Sunday
+console.log(weekDayName) // returns "Sunday"
 
-// example <span class="hljs-number">3</span>
+```
+
+```js
+//Example 2:
 
 const month = <span class="hljs-number">3</span>
 const monthName = getMonthName(month)
-console.log(monthName) // <span class="hljs-built_in">return</span> march
+console.log(monthName) // returns "March"
 
-// example <span class="hljs-number">4</span> 
+```
 
-const month = <span class="hljs-number">2</span>
-const year = <span class="hljs-number">2024</span>
+```js
+//Example 3:
+
+const month = <span class="hljs-number">3</span>
+const monthName = getMonthName(month)
+console.log(monthName) // returns "March"
+
+```
+```js
+//Example 4:
+
+const month = 2
+const year = 2024
 const monthLength = getMonthLength(month, year)
-console.log(monthLength) // <span class="hljs-built_in">return</span> <span class="hljs-number">29</span>
+console.log(monthLength) // returns 29
 
-// example <span class="hljs-number">5</span>
+```
+```js
+//Example 5:
 
-const month = <span class="hljs-number">1</span>
-const year = <span class="hljs-number">2022</span>
+const month = 1
+const year = 2022
 const monthInfo = getMonthInfo(month, year)
-console.log(monthInfo) // <span class="hljs-built_in">return</span>  { length: <span class="hljs-number">31</span>, name: <span class="hljs-string">'January'</span>, year: <span class="hljs-number">2022</span> }
+console.log(monthInfo) // returns  { length: 31, name: "January", year: 2022 }
 
-// example <span class="hljs-number">6</span>
+```
+```js
+//Example 6:
 
-const year1 = <span class="hljs-number">2022</span>
-const year2 = <span class="hljs-number">2024</span>
-const year1Length = BDF.getYearLength(year1)
-const year2Length = BDF.getYearLength(year2)
-console.log(year1Length, year2Length) // <span class="hljs-built_in">return</span> <span class="hljs-number">365</span>, <span class="hljs-number">366</span>
+const year1 = 2022
+const year2 = 2024
+const year1Length = getYearLength(year1)
+const year2Length = getYearLength(year2)
+console.log([year1Length, year2Length]) // returns [365, 366]
 
-// example <span class="hljs-number">7</span>
+```
+<h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="How_to_use_24"></a>Examples with date</h2>
 
-<span class="hljs-built_in">set</span>Language(<span class="hljs-string">'ptBr1) // can be '</span>ptBr<span class="hljs-string">' or '</span>enUs<span class="hljs-string">' in the current moment;
-setThrowingErrors(false) // to stop throwing errors and just do console.errors;
+```js
+import { withDate } from 'better-date-functions'    // import the withDate functions
+                                                    // you can destructurate too
+                                                    // const { withDate } = BDF;
 
-Now, using the method with Date as parametter
+```
 
-import BDF, { withDate }  from '</span>better-date-functions<span class="hljs-string">';
+```js
+//Examples:
 
-// withDate has all functions of BDF, but has been class Date as parameter;
+const date = new Date() // currently on 26th January, 2022
 
-// example 8
+const weekDayName = withDate.getWeekDayName(date)
+console.log(weekDayName) // returns "Wednesday"
 
-withDate.{someFunction}(new Date())
+const monthLength = withDate.getMonthLength(date)
+console.log(monthLength) // returns 31
 
-// or get destructuring the object withDate
+const monthName = withDate.getMonthName(date)
+console.log(monthName) // returns "January"
 
-const { someFunction } = withDate
+const monthInfo = withDate.getMonthInfo(date)
+console.log(monthInfo) // returns { name: "January", length: 31, year: 2022 }
 
-const someReturn = someFunction(new Date());
+const yearLength = withDate.getYearLength(date)
+console.log(yearLength) // returns 365
 
-console.log(someReturn)
+const formatedDate = withDate.getformatedDate(date)
+console.log(formatedDate) // returns 01/26/2022
+
+const separator = "-"
+const formatedDateWithCustomSeparator = withDate.getformatedDate(date, separator)
+console.log(formatedDateWithCustomSeparator) // returns 01-26-2022
+
+```
+
+<h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="How_to_use_24"></a>Configurations</h2>
+
+```js
+//Changing the language of the returns
+
+const weekDay = 1
+const date = new Date() // currently on 26th January, 2022
+
+let weekDayName = getWeekDayName(weekDay)
+console.log(weekDayName) // returns "Sunday"
+
+let formatedDate = withDate.getformatedDate(date)
+console.log(formatedDate) // returns 01/26/2022
+
+setLanguage('ptBR') // Currently supports "enUs" and "ptBr"
+
+weekDayName = getWeekDayName(weekDay)
+console.log(weekDayName) // returns "Domingo"
+
+formatedDate = withDate.getformatedDate(date)
+console.log(formatedDate) // returns 26/01/2022
+
+const currentLanguage = getCurrentLanguage() // to get the current language configurated
+
+console.log(currentLanguage) // returns "ptBr"
+
+```
+```js
+//Change the throwing errors configuration
+
+let isThrowingErrors = getCurrentThrowingErrorsState() // by default the value of the state is true
+
+console.log(isThrowingErrors) // returns true
+
+setThrowingErrors(false) // you can change the state using this function
+
+isThrowingErrors = getCurrentThrowingErrorsState()
+
+console.log(isThrowingErrors) // returns false
+
+```
 
 </span></code></pre>
 <h2 class="code-line" data-line-start=113 data-line-end=114 ><a id="Author_and_contributors_113"></a>Author and contributors</h2>

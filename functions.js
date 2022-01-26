@@ -1,7 +1,7 @@
 const Enums = require('./enums.js')
 const Utils = require('./utils')
 
-const { language, checkDateNumbers, setLanguage, getCurrentLanguage, setThrowingErrors, getCurrentThrowingErrorsState } = Utils
+const { checkDateNumbers, setLanguage, getCurrentLanguage, setThrowingErrors, getCurrentThrowingErrorsState } = Utils
 
 function getMonthLength(month, year){
     if(checkDateNumbers(1, 1, month, year)) {
@@ -12,7 +12,7 @@ function getMonthLength(month, year){
 
 function getMonthName(month){
     if(checkDateNumbers(1, 1, month, 1)) {
-        return Enums.MONTHS[language][month - 1]
+        return Enums.MONTHS[getCurrentLanguage()][month - 1]
     }
     
 }
@@ -20,7 +20,7 @@ function getMonthName(month){
 
 function getWeekDayName(weekDay){
     if(checkDateNumbers(1, weekDay, 1, 1)) {
-        return Enums.WEEK_DAYS[language][weekDay - 1]
+        return Enums.WEEK_DAYS[getCurrentLanguage()][weekDay - 1]
     }
 }
 
@@ -28,7 +28,7 @@ function getWeekDayName(weekDay){
 function getWeekDayNameWithADate(day, month, year){
     if(checkDateNumbers(day, 1, month, year)) {
         const weekDay = new Date(year, month - 1, day).getDay()
-        return Enums.WEEK_DAYS[language][weekDay]
+        return Enums.WEEK_DAYS[getCurrentLanguage()][weekDay]
     }
    
 }
