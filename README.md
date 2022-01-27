@@ -1,18 +1,39 @@
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="_Better_Date_Functions_BDF__0"></a><em>Better Date Functions (BDF)</em></h1>
-<p class="has-line-data" data-line-start="2" data-line-end="3"><a href="https://travis-ci.org/joemccann/dillinger"><img src="https://travis-ci.org/joemccann/dillinger.svg?branch=master" alt="Build Status"></a></p>
-<p class="has-line-data" data-line-start="4" data-line-end="5">Better Date Functions (BDF) is a alternative for Class Date, native from the javascript language.</p>
-<h2 class="code-line" data-line-start=6 data-line-end=7 ><a id="Tech_6"></a>Tech</h2>
-<p class="has-line-data" data-line-start="8" data-line-end="10"><a href="https://travis-ci.org/joemccann/dillinger"><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&amp;logo=javascript&amp;logoColor=F7DF1E" alt="Build Status"></a><br>
-<a href="https://travis-ci.org/joemccann/dillinger"><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&amp;logo=node.js&amp;logoColor=white" alt="Build Status"></a></p>
-<h2 class="code-line" data-line-start=11 data-line-end=12 ><a id="Installation_11"></a>Installation</h2>
-<p class="has-line-data" data-line-start="13" data-line-end="14">BDF requires <a href="https://nodejs.org/">Node.js</a> v10+ to run.</p>
-<p class="has-line-data" data-line-start="15" data-line-end="16">Install the BDF as dependency or dev dependency.</p>
-<pre><code class="has-line-data" data-line-start="18" data-line-end="22" class="language-sh">npm i better-date-functions
-or
-yarn add better-date-functions
-</code></pre>
-<h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="How_to_use_24"></a>How to use</h2>
-<pre><code class="has-line-data" data-line-start="27" data-line-end="112" class="language-sh">
+
+<div align="center">
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&amp;logo=node.js&amp;logoColor=white" alt="Build Status">
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&amp;logo=javascript&amp;logoColor=F7DF1E" alt="Build Status"><br>
+<img src="https://img.shields.io/npm/v/better-date-functions.svg?style=for-the-badge" alt="BDF">
+<img src="https://img.shields.io/github/deployments/jeffreylanters/react-unity-webgl/Node%20Package%20Registry?style=for-the-badge" alt="BDF">
+<img src="https://img.shields.io/npm/dt/better-date-functions.svg?style=for-the-badge&color=40AA72" alt="Stars">
+<img src="https://img.shields.io/bundlephobia/minzip/react-unity-webgl?style=for-the-badge&label=size" alt="Downloads">
+<br>
+
+</div>
+
+# Installation 
+<br><p class="has-line-data" data-line-start="13" data-line-end="14">BDF requires <a href="https://nodejs.org/">Node.js</a> v10+ to run.</p><br>
+<pre><code class="has-line-data" data-line-start="18" data-line-end="22" class="language-sh">
+    npm i better-date-functions
+    or
+    yarn add better-date-functions
+
+</code></pre><br><br>
+
+
+# Documentation
+
+- [Getting the BDF dependency](#getting-the-bdf-dependency)
+- [All examples](#all-examples)
+- [Examples with Date](#examples-with-date)
+- [Configurations](#configurations)
+- [Contribution and Development](#contribution-and-development)
+
+
+<br><h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="getting-the-bdf-dependency"></a>
+    Getting the BDF dependency
+</h2><br>
+<span><pre><code class="has-line-data" data-line-start="27" data-line-end="112" class="language-sh">
 
 ```js
 // import the the BDF dependency
@@ -51,8 +72,9 @@ const weekDayName = getWeekDayNameWithADate(day, month, year);
 console.log(weekDayName) // returns "Monday"
 
 ```
-
-<h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="How_to_use_24"></a>All examples</h2>
+</span></code></pre>
+<br><h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="all-examples"></a>All examples</h2><br>
+<span><pre><code class="has-line-data" data-line-start="91" data-line-end="110" class="language-sh">
 
 ```js
 //Example 1:
@@ -108,7 +130,9 @@ const year2Length = getYearLength(year2)
 console.log([year1Length, year2Length]) // returns [365, 366]
 
 ```
-<h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="How_to_use_24"></a>Examples with date</h2>
+</span></code></pre>
+<br><h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="examples-with-date"></a>Examples with date</h2><br>
+<span><pre><code class="has-line-data" data-line-start="91" data-line-end="110" class="language-sh">
 
 ```js
 import { withDate } from 'better-date-functions'    // import the withDate functions
@@ -145,8 +169,10 @@ const formatedDateWithCustomSeparator = withDate.getformatedDate(date, separator
 console.log(formatedDateWithCustomSeparator) // returns 01-26-2022
 
 ```
+</span></code></pre>
 
-<h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="How_to_use_24"></a>Configurations</h2>
+<br><h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="configurations"></a>Configurations</h2><br>
+<span><pre><code class="has-line-data" data-line-start="91" data-line-end="110" class="language-sh">
 
 ```js
 //Changing the language of the returns
@@ -188,8 +214,9 @@ console.log(isThrowingErrors) // returns false
 
 ```
 
-</span></code></pre>
-<h2 class="code-line" data-line-start=113 data-line-end=114 ><a id="Author_and_contributors_113"></a>Author and contributors</h2>
-<p class="has-line-data" data-line-start="115" data-line-end="116">XaloDev & wagnersillva</p>
+</span></code></pre><br>
+
+<h2 class="code-line" data-line-start=113 data-line-end=114 ><a id="contribution-and-development"></a>Author and contributors</h2>
+<p class="has-line-data" data-line-start="115" data-line-end="116">XaloDev & wagnersillva</p><br>
 <h2 class="code-line" data-line-start=117 data-line-end=118 ><a id="License_117"></a>License</h2>
 <p class="has-line-data" data-line-start="119" data-line-end="120">ICS</p>
