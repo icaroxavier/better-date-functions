@@ -4,9 +4,9 @@
 <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&amp;logo=node.js&amp;logoColor=white" alt="Build Status">
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&amp;logo=javascript&amp;logoColor=F7DF1E" alt="Build Status"><br>
 <img src="https://img.shields.io/npm/v/better-date-functions.svg?style=for-the-badge" alt="BDF">
-<img src="https://img.shields.io/github/deployments/jeffreylanters/react-unity-webgl/Node%20Package%20Registry?style=for-the-badge" alt="BDF">
-<img src="https://img.shields.io/npm/dt/better-date-functions.svg?style=for-the-badge&color=40AA72" alt="Stars">
-<img src="https://img.shields.io/bundlephobia/minzip/react-unity-webgl?style=for-the-badge&label=size" alt="Downloads">
+<!-- <img src="https://img.shields.io/github/deployments/xalodev/better-date-functions/Node%20Package%20Registry?style=for-the-badge" alt="BDF"> -->
+<img src="https://img.shields.io/npm/dt/better-date-functions.svg?style=for-the-badge&color=40AA72" alt="Downloads">
+<!-- <img src="https://img.shields.io/bundlephobia/minzip/better-date-functions?style=for-the-badge&label=size" alt="Downloads"> -->
 <br>
 
 </div>
