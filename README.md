@@ -88,7 +88,7 @@ console.log(weekDayName) // returns "Sunday"
 ```js
 //Example 2:
 
-const month = <span class="hljs-number">3</span>
+const month = 3
 const monthName = getMonthName(month)
 console.log(monthName) // returns "March"
 
@@ -97,7 +97,7 @@ console.log(monthName) // returns "March"
 ```js
 //Example 3:
 
-const month = <span class="hljs-number">3</span>
+const month = 3
 const monthName = getMonthName(month)
 console.log(monthName) // returns "March"
 
@@ -107,7 +107,7 @@ console.log(monthName) // returns "March"
 
 const month = 2
 const year = 2024
-const monthLength = getMonthLength(month, year)
+const monthLength = getMonthLength(month, year) // Year is optional, but for precise Length in February you need the year
 console.log(monthLength) // returns 29
 
 ```
@@ -116,7 +116,7 @@ console.log(monthLength) // returns 29
 
 const month = 1
 const year = 2022
-const monthInfo = getMonthInfo(month, year)
+const monthInfo = getMonthInfo(month, year) // Year is optional, but for precise Length in February you need the year
 console.log(monthInfo) // returns  { length: 31, name: "January", year: 2022 }
 
 ```

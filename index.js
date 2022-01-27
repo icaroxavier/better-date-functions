@@ -25,3 +25,8 @@ module.exports = {
 // functions.setThrowingErrors(false)
 // console.log(functions.getCurrentThrowingErrorsState())
 // console.log(withDateFunctions.getFormatedDate(new Date(), 1))
+
+// console.log(functions.getMonthLength(2))
+// console.log(functions.getMonthLength(2, 2024))
+// console.log(functions.getMonthInfo(2))
+// console.log(functions.getMonthInfo(2, 2024))

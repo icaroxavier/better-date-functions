@@ -3,7 +3,7 @@ const Utils = require('./utils')
 
 const { checkDateNumbers, setLanguage, getCurrentLanguage, setThrowingErrors, getCurrentThrowingErrorsState } = Utils
 
-function getMonthLength(month, year){
+function getMonthLength(month, year = 1){
     if(checkDateNumbers(1, 1, month, year)) {
         return new Date(year, month, 0).getDate()
     }
@@ -35,14 +35,20 @@ function getWeekDayNameWithADate(day, month, year){
 
 
 
-function getMonthInfo(month, year){
-    if(checkDateNumbers(1, 1, month, year)) {
-        const monthInfo = {
-            length: getMonthLength(month, year),
+function getMonthInfo(month, year = false){
+    if(checkDateNumbers(1, 1, month, year ? year : 1)) {
+        let monthInfo = {
+            length: getMonthLength(month, year ? year : 1),
             name: getMonthName(month),
             year
         }
-        return monthInfo
+        if(year){
+            return monthInfo
+        }else {
+            delete monthInfo.year
+            return monthInfo
+        }
+        
     }
 }
 
